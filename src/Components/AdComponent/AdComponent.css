@@ -1,0 +1,37 @@
+.ads-container {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 750px;
+    height: 100px;
+    z-index: 5;
+    background: greenyellow;
+    border-radius: 50px 0 0 0;
+}
+.ads-items {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+.ads-items:nth-child(2) {
+    flex-direction: row;
+    gap: 20px;
+}
+.ads-items p {
+    font-size: 20px;
+    color: black;
+
+}
+.ads-items h4 {
+    font-size: 20px;
+    color: black;
+    margin: 0;
+}
+.ads-items img {
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+}
