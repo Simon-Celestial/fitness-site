@@ -8,7 +8,7 @@ const FormContainer = () => {
             <br/>
             GET IN TOUCH
         </b>
-        <div className="main-page-form-block">
+        <div className="main-page-form-block" id="formAnchor">
             <form action="#" encType="multipart/form-data">
                 <div className="form-input-container">
                     <div className="form-input-block">

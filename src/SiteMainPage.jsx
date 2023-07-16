@@ -210,8 +210,8 @@ const SiteMainPage = () => {
                     </div>
                 </div>
                 <VideoComponentAd/>
-                <FormContainer/>
-                <div className="form-empty-container"></div>
+                <FormContainer />
+                <div  className="form-empty-container"/>
                 <FooterComponent />
             </div>
         </div>

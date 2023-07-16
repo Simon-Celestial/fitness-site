@@ -2,6 +2,10 @@ import './App.css';
 import React from "react";
 import {Route, Routes} from "react-router-dom";
 import SiteMainPage from "./SiteMainPage";
+import ChallengesPage from "./Pages/Challenges/ChallengesPage";
+import PlansPage from "./Pages/Plans/PlansPage";
+import TrainersPage from "./Pages/Trainers/TrainersPage";
+import GroupsPage from "./Pages/Groups/GroupsPage";
 
 
 function App() {
@@ -9,6 +13,10 @@ function App() {
         <div className="app">
             <Routes>
                 <Route path="/" element={<SiteMainPage />}/>
+                <Route path="/challenges" element={<ChallengesPage />}/>
+                <Route path="/plans" element={<PlansPage />}/>
+                <Route path="/trainers" element={<TrainersPage />}/>
+                <Route path="/groups" element={<GroupsPage />}/>
             </Routes>
         </div>
 
