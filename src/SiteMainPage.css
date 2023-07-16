@@ -1,6 +1,8 @@
 :root {
     --purple-color: #8B00FF;
     --green-color: greenyellow;
+    --orange-color: orange;
+    --pink-color: #FF69B4;
 }
 
 .site-wrapper {
@@ -81,6 +83,10 @@
     font-size: 18px;
     text-decoration: underline;
     cursor: pointer;
+    transition: 0.3s;
+}
+.main-page-selection p:hover {
+    color: var(--purple-color);
 }
 
 .main-page-second-container {
@@ -147,6 +153,11 @@
     border-radius: 30px 0 30px 30px;
     font-size: 18px;
     cursor: pointer;
+    transition: 0.3s;
+}
+.second-container-info-block button:hover {
+background: black;
+    color: var(--green-color);
 }
 
 .second-container-image-block {
@@ -280,7 +291,11 @@
     height: 45px;
     cursor: pointer;
     background: var(--green-color);
-
+    transition: 0.3s;
+}
+.price-block-items button:hover {
+    background: black;
+    color: var(--green-color);
 }
 
 .price-block-items .monthly-button {

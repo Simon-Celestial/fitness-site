@@ -1,0 +1,169 @@
+.trainers-wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+.trainers-content {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0 20px 0;
+    flex-direction: column;
+}
+.trainers-colored-block {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    padding: 100px 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background: var(--pink-color);
+}
+.colored-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: auto;
+    height: auto;
+    margin-right: 150px;
+
+}
+.trainers-colored-text-container b {
+    font-size: 70px;
+}
+.trainers-colored-text-container p {
+    font-size: 30px;
+    width: 400px;
+}
+.fitness-back-img {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    top: 400px;
+    right: 30%;
+    border-radius: 45% 45% 0 0;
+}
+.trainers-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+.trainers-info-text {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 300px 0 80px 0;
+}
+.trainers-info-text b {
+    font-size: 70px;
+}
+.trainers-info-text p {
+    font-size: 22px;
+    text-align: center;
+}
+.trainers-photo-info-block {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+.trainers-info-row {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.trainers-info-row-container {
+    display: flex;
+    width: 240px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.28);
+    gap: 20px;
+}
+.trainers-row-photo-item {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.trainers-row-photo-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.trainers-row-photo-item h2 {
+    margin: 0;
+    color: blue;
+    font-size: 25px;
+}
+.trainers-row-photo-item p {
+    font-size: 20px;
+}
+
+.trainers-row-text-item {
+    display: flex;
+    width: auto;
+    height: auto;
+
+}
+
+.trainers-row-text-item p {
+font-size: 18px;
+}
+.trainers-classes-block {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    gap: 15px;
+    padding-bottom: 100px;
+}
+.trainers-classes-block p {
+    font-size: 18px;
+    text-align: center;
+}
+.classes-button-block {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.classes-button-block button {
+    width: 180px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: var(--green-color);
+    border-radius: 20px 0 20px 20px;
+}
+
+.classes-button-block button:hover {
+    background: black;
+    color: var(--green-color);
+}
