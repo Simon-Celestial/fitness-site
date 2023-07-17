@@ -4,9 +4,23 @@ import FixedMenu from "../../Components/FixedMenu/FixedMenu";
 import NavigationMenu from "../../Components/NavigationMenu/NavigationMenu";
 import FooterComponent from "../../Components/FooterComponent/FooterComponent";
 import runningImg from "../../Assets/images/running.jpg";
-
+import ChallengeItem from "./ChallengeItem";
 
 const ChallengesPage = () => {
+    let myChallengesArray = [
+        {
+            upText: "Get Marathon",
+            bottomText: "Ready"
+        },
+        {
+            upText: "Running for",
+            bottomText: "Begginers"
+        },
+        {
+            upText: "5k Running",
+            bottomText: "Challenge"
+        }
+    ] 
     return (
         <div className="challenges-wrapper">
             <FixedMenu />
@@ -22,27 +36,10 @@ const ChallengesPage = () => {
             </div>
                 <img src={runningImg} alt="running" className="running-img"/>
                 <div className="challenger-offer-block">
-                    <div className="challenges-offer-items">
-                        <b>Get Marathon
-                        <br/>
-                            Ready
-                        </b>
-                        <button type="button">Join now</button>
-                    </div>
-                    <div className="challenges-offer-items">
-                        <b>Running for
-                            <br/>
-                            Begginers
-                        </b>
-                        <button type="button">Join now</button>
-                    </div>
-                    <div className="challenges-offer-items">
-                        <b>5k Running
-                            <br/>
-                            Challenge
-                        </b>
-                        <button type="button">Join now</button>
-                    </div>
+                   { myChallengesArray.map(item => {
+                      return <ChallengeItem upText={item.upText} bottomText={item.bottomText} />
+                    })
+                }
                 </div>
             </div>
             <FooterComponent />
