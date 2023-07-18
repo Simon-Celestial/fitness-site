@@ -37,7 +37,7 @@ const ChallengesPage = () => {
                 <img src={runningImg} alt="running" className="running-img"/>
                 <div className="challenger-offer-block">
                    { myChallengesArray.map(item => {
-                      return <ChallengeItem upText={item.upText} bottomText={item.bottomText} />
+                      return <ChallengeItem  upText={item.upText} bottomText={item.bottomText} />
                     })
                 }
                 </div>

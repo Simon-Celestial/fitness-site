@@ -84,3 +84,75 @@
 .challenges-offer-items button:hover {
     background: var(--orange-color);
 }
+@media only screen and (max-width: 1300px) {
+    .colored-text-container b {
+        font-size: 40px;
+    }
+    .colored-text-container p {
+        width: 320px;
+    }
+    .running-img {
+        right: 15%;
+        top: 450px;
+        height: 400px;
+        width: 320px;
+    }
+}
+@media only screen and (max-width: 870px) {
+    .challenger-offer-block {
+        padding: 200px 0 20px 0;
+        flex-direction: column;
+    }
+    .colored-text-container p {
+        width: 290px;
+        font-size: 22px;
+    }
+    .running-img {
+        right: 12%;
+        top: 400px;
+        height: 290px;
+        width: 250px;
+    }
+    .challenges-offer-items {
+        width: 300px;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    .running-img {
+     display: none;
+    }
+    .colored-text-container {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 0;
+    }
+    .challenger-colored-block {
+        padding: 20px 0;
+    }
+    .colored-text-container b {
+        font-size: 29px;
+    }
+    .colored-text-container p {
+        font-size: 22px;
+    }
+    .challenger-offer-block {
+        padding: 20px 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .challenges-offer-items {
+        width: 280px;
+        height: auto;
+        padding: 20px 0;
+        gap: 20px;
+    }
+    .challenges-offer-items button {
+        width: 120px;
+    }
+
+}

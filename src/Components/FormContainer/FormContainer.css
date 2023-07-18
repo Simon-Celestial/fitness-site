@@ -15,7 +15,7 @@
 .main-page-form-block {
     display: flex;
     position: absolute;
-    bottom: -30%;
+    bottom: -40%;
     background: var(--green-color);
     width: 950px;
     height: auto;
@@ -99,3 +99,95 @@
     color: var(--green-color);
     cursor: pointer;
 }
+@media only screen and (max-width: 1200px) {
+    .main-page-form-container b {
+        font-size: 50px;
+    }
+    .main-page-form-block {
+        width: 800px;
+    }
+    .form-input-container input {
+        width: 250px;
+    }
+    .main-page-form-block textarea {
+        width: 550px;
+    }
+    .main-page-form-container {
+        height: 550px;
+    }
+    .main-page-form-block {
+        width: 700px;
+        height: auto;
+        bottom: -47%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-page-form-container b {
+        font-size: 45px;
+    }
+    .main-page-form-block label {
+        font-size: 16px;
+    }
+    .main-page-form-block {
+        width: 700px;
+        height: auto;
+    }
+    .form-input-container input {
+        width: 230px;
+        height: 30px;
+        font-size: 18px;
+    }
+    .main-page-form-block textarea {
+        width: 510px;
+        height: 50px;
+    }
+    .main-page-form-container {
+        height: 530px;
+    }
+
+}
+@media only screen and (max-width: 800px) {
+    .main-page-form-block {
+        width: 600px;
+    }
+    .form-input-container input {
+        width: 200px;
+    }
+    .main-page-form-block textarea {
+        width: 450px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .main-page-form-container {
+        padding-top: 40px;
+    }
+    .main-page-form-block {
+        width: 270px;
+        bottom: -30%;
+    }
+    .form-input-block {
+        gap: 20px;
+    }
+    .form-input-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .main-page-form-block form {
+        gap: 20px;
+    }
+    .form-input-container input {
+        width: 200px;
+    }
+    .main-page-form-block textarea {
+        width: 200px;
+        height: 60px;
+        font-size: 15px;
+    }
+    .main-page-form-container b {
+        font-size: 20px;
+    }
+    .form-empty-container {
+        height: 200px;
+    }
+    }

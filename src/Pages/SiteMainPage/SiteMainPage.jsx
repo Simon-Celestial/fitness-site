@@ -1,22 +1,22 @@
 import "./SiteMainPage.css";
-import NavigationMenu from "./Components/NavigationMenu/NavigationMenu";
-import mainImgA from "././Assets/images/main-background.jpg"
-import mainImgB from "././Assets/images/main-background2.jpg"
-import AdComponent from "./Components/AdComponent/AdComponent";
-import mainImgC from "./Assets/images/fitness-man.jpg";
-import mainImgD from "./Assets/images/fitness-man-2.jpg";
-import FixedMenu from "./Components/FixedMenu/FixedMenu";
-import fitnessHall from "./Assets/images/fitness-hall.jpg";
-import jordenTrainer from "./Assets/images/jorden-img.webp";
-import jeremyTrainer from "./Assets/images/jeremy-img.webp";
-import emilyTrainer from "./Assets/images/emily-img.webp";
-import hannaTrainer from "./Assets/images/hanna-img.webp";
-import verifyImg from "./Assets/images/verify.png";
-import quoteImg from "./Assets/images/quote.png";
+import NavigationMenu from "../../Components/NavigationMenu/NavigationMenu";
+import mainImgA from "../../Assets/images/main-background.jpg"
+import mainImgB from "../../Assets/images/main-background2.jpg"
+import AdComponent from "../../Components/AdComponent/AdComponent";
+import mainImgC from "../../Assets/images/fitness-man.jpg";
+import mainImgD from "../../Assets/images/fitness-man-2.jpg";
+import FixedMenu from "../../Components/FixedMenu/FixedMenu";
+import fitnessHall from "../../Assets/images/fitness-hall.jpg";
+import jordenTrainer from "../../Assets/images/jorden-img.webp";
+import jeremyTrainer from "../../Assets/images/jeremy-img.webp";
+import emilyTrainer from "../../Assets/images/emily-img.webp";
+import hannaTrainer from "../../Assets/images/hanna-img.webp";
+import verifyImg from "../../Assets/images/verify.png";
+import quoteImg from "../../Assets/images/quote.png";
 import React from "react";
-import VideoComponentAd from "./Components/VideoComponentAd/VideoComponentAd";
-import FormContainer from "./Components/FormContainer/FormContainer";
-import FooterComponent from "./Components/FooterComponent/FooterComponent";
+import VideoComponentAd from "../../Components/VideoComponentAd/VideoComponentAd";
+import FormContainer from "../../Components/FormContainer/FormContainer";
+import FooterComponent from "../../Components/FooterComponent/FooterComponent";
 
 const SiteMainPage = () => {
     return (

@@ -4,6 +4,7 @@
     height: auto;
     flex-direction: column;
 }
+
 .plans-main-content {
     display: flex;
     width: 100%;
@@ -12,6 +13,7 @@
     align-items: center;
     padding: 70px 0 20px 0;
 }
+
 .plans-main-content-container {
     display: flex;
     width: auto;
@@ -20,9 +22,11 @@
     align-items: center;
     flex-direction: column;
 }
+
 .plans-main-content-container h1 {
     font-size: 80px;
 }
+
 .membership-block {
     display: flex;
     width: 100%;
@@ -31,6 +35,7 @@
     align-items: center;
     gap: 20px;
 }
+
 .membership-containers {
     display: flex;
     flex-direction: column;
@@ -42,18 +47,22 @@
     gap: 30px;
     padding-top: 50px;
 }
+
 .membership-containers p {
     font-size: 40px;
-    margin:0
+    margin: 0
 }
+
 .membership-containers h2 {
     font-size: 70px;
     margin: 0;
 }
+
 .membership-containers h4 {
     font-size: 12px;
     margin: 0;
 }
+
 .membership-containers button {
     width: 300px;
     height: 50px;
@@ -62,9 +71,11 @@
     cursor: pointer;
     transition: 0.3s;
 }
+
 .membership-containers button:hover {
     background: var(--green-color);
 }
+
 .membership-benefit-container {
     display: flex;
     flex-direction: column;
@@ -72,4 +83,51 @@
     height: 100%;
     background: var(--green-color);
     align-items: center;
+}
+
+@media only screen and (max-width: 1080px) {
+    .plans-main-content {
+        padding: 0 0 50px 0;
+    }
+
+    .plans-main-content-container h1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .membership-block {
+        flex-direction: column;
+    }
+
+    .membership-containers {
+        gap: 10px;
+        padding-top: 20px;
+    }
+    .membership-benefit-container h3 {
+        font-size: 12px;
+    }
+    .membership-containers h2 {
+        font-size: 45px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .plans-main-content-container h1 {
+        font-size: 25px;
+    }
+
+    .membership-containers {
+        width: 280px;
+    }
+    .membership-containers button {
+        width: 200px;
+        font-size: 15px;
+        height: 40px;
+    }
+    .membership-containers h2 {
+        font-size: 35px;
+    }
+    .plans-main-content {
+        padding-bottom: 20px;
+    }
 }
