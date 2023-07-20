@@ -9,10 +9,18 @@ const FixedMenu = () => {
     return (
     <div className="fixed-menu">
         <div className="vertical-fixed-block">
+            <a href="https://www.facebook.com/wix" target="_blank" rel="next">
             <img src={facebookImg} alt="facebook"/>
-            <img src={youtubeImg} alt="youtube"/>
+            </a>
+            <a href="https://www.youtube.com/user/Wix" target="_blank">
+            <img src={youtubeImg} alt="youtube" />
+            </a>
+            <a href="https://www.tiktok.com/@wix?" target="_blank">
             <img src={tikTokImg} alt="tik-tok"/>
+            </a>
+            <a href="https://www.instagram.com/wix/" target="_blank">
             <img src={instagramImg} alt="instagram"/>
+            </a>
         </div>
         <div className="horizontal-fixed-block">
             <img src={chatImg} alt="chat"/>

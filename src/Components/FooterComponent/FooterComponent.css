@@ -120,6 +120,9 @@
     display: block;
 
 }
+.footer-selection-items a {
+    text-decoration: 0;
+}
 .footer-selection-items p {
     cursor: pointer;
 }
@@ -147,9 +150,10 @@
     justify-content: center;
     align-items: center;
 }
-.footer-copyright p i {
-    text-decoration: underline;
+
+.footer-copyright p a {
     cursor: pointer;
+    color: black;
 }
 @media only screen and (max-width: 1250px) {
     .footer-selection-container {

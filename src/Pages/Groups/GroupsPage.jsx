@@ -2,7 +2,7 @@ import "./GroupsPage.css";
 import FixedMenu from "../../Components/FixedMenu/FixedMenu";
 import NavigationMenu from "../../Components/NavigationMenu/NavigationMenu";
 import FooterComponent from "../../Components/FooterComponent/FooterComponent";
-import React from "react";
+import React, {useEffect} from "react";
 import manUser from "../../Assets/images/man-user.png";
 import videoCamera from "../../Assets/images/video-camera.png";
 import photoCamera from "../../Assets/images/camera.png";
@@ -10,11 +10,24 @@ import searchImg from "../../Assets/images/search.png";
 import groupOneImg from "../../Assets/images/group-1.webp";
 import groupTwoImg from "../../Assets/images/group-2.webp";
 import groupThreeImg from "../../Assets/images/group-3.webp";
+import {useLocation} from "react-router-dom";
 
 
 const GroupsPage = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+
+        if (location.hash === "#groupsAnchor") {
+            const element = document.getElementById("groupsAnchor");
+            if (element) {
+                element.scrollIntoView();
+            }
+        }
+
+    }, [location]);
     return (
-        <div className="groups-wrapper">
+        <div className="groups-wrapper" id="groupsAnchor">
             <FixedMenu/>
             <NavigationMenu/>
             <div className="groups-main-content">

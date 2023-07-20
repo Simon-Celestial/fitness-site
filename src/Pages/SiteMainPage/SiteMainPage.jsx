@@ -13,14 +13,40 @@ import emilyTrainer from "../../Assets/images/emily-img.webp";
 import hannaTrainer from "../../Assets/images/hanna-img.webp";
 import verifyImg from "../../Assets/images/verify.png";
 import quoteImg from "../../Assets/images/quote.png";
-import React from "react";
 import VideoComponentAd from "../../Components/VideoComponentAd/VideoComponentAd";
 import FormContainer from "../../Components/FormContainer/FormContainer";
 import FooterComponent from "../../Components/FooterComponent/FooterComponent";
+import {Link, useLocation} from "react-router-dom";
+import {useEffect} from "react";
+
 
 const SiteMainPage = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash === "#footerAnchor") {
+            const element = document.getElementById("footerAnchor");
+            if (element) {
+                element.scrollIntoView();
+            }
+        }
+        if (location.hash === "#homeAnchor") {
+            const element = document.getElementById("homeAnchor");
+            if (element) {
+                element.scrollIntoView();
+            }
+        }
+        if (location.hash === "#formAnchor") {
+            const element = document.getElementById("formAnchor");
+            if (element) {
+                element.scrollIntoView();
+            }
+        }
+
+    }, [location]);
+
     return (
-        <div className="site-wrapper">
+        <div className="site-wrapper" id="homeAnchor">
             <FixedMenu/>
             <NavigationMenu/>
             <div className="main-page-content">
@@ -30,10 +56,6 @@ const SiteMainPage = () => {
                         <h1>You Can</h1>
                         <h1>& You Will</h1>
                         <p>For your convenience; fitness workouts online & in person so you always have the choice. </p>
-                        <div className="main-page-selection">
-                            <p>In Person Classes</p>
-                            <p>Online Classes</p>
-                        </div>
                     </div>
                     <img src={mainImgA} alt="fitness" className="main-img-a"/>
                     <img src={mainImgB} alt="fitness" className="main-img-b"/>
@@ -84,13 +106,15 @@ const SiteMainPage = () => {
                         <div className="price-block-items">
                             <p>YEARLY PLAN
                                 <br/>
-                                (50% off)
+                                (40% off)
                             </p>
                             <h1>$29.99</h1>
                             <h5>per/month</h5>
+                            <Link to="/plans#plansAnchor">
                             <button type="button" className="monthly-button">
                                 Start 1 Month Free
                             </button>
+                                </Link>
                         </div>
                     </div>
                     <div className="price-container-blocks">
@@ -104,9 +128,11 @@ const SiteMainPage = () => {
                             </p>
                             <h1>$49.99</h1>
                             <h5>per/month</h5>
+                            <Link to="/plans#plansAnchor">
                             <button type="button" className="yearly-button">
                                 Start 1 Month Free
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -118,12 +144,12 @@ const SiteMainPage = () => {
                         <p>Our studio classes stream live so you can feel the studio wherever you are.</p>
                         <div className="classes-selection-block">
                             <div className="classes-selection-item">
-                                <i>In Person Classes</i>
-                                <button type="button">Book Your Spot</button>
+                                <i>In-person fitness classes offer a wide range of benefits that can enhance your
+                                    overall health, fitness, and well-being.</i>
                             </div>
                             <div className="classes-selection-item">
-                                <i>Online Classes</i>
-                                <button type="button">Book Your Spot</button>
+                                <i>Online fitness classes provide several advantages for individuals looking to stay
+                                    active, fit, and healthy.</i>
                             </div>
                         </div>
                     </div>
@@ -131,7 +157,9 @@ const SiteMainPage = () => {
                 <div className="main-page-next-heading">
                     <b>THEY MAKE IT <i>Happen</i></b>
                     <p>Our head trainers work hard to create exercises right for you.</p>
-                    <button type="button">Meet All Trainers</button>
+                    <Link to="/trainers#trainersAnchor">
+                        <button type="button">Meet All Trainers</button>
+                    </Link>
                 </div>
                 <div className="main-page-trainers">
                     <div className="trainers-item">
@@ -140,7 +168,9 @@ const SiteMainPage = () => {
                             <h5>JORDEN</h5>
                             <p>Specializing in Strength</p>
                         </div>
+                        <Link to="/trainers#trainersAnchor">
                         <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
+                        </Link>
                     </div>
                     <div className="trainers-items">
                         <div className="trainers-item">
@@ -149,7 +179,9 @@ const SiteMainPage = () => {
                                 <h5>JEREMY</h5>
                                 <p>Specializing in Yoga</p>
                             </div>
+                            <Link to="/trainers#trainersAnchor">
                             <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
+                            </Link>
                         </div>
                         <div className="trainers-item">
                             <img src={hannaTrainer} alt="fitness-trainer-hanna"/>
@@ -157,7 +189,9 @@ const SiteMainPage = () => {
                                 <h5>HANNA</h5>
                                 <p>Specializing in Endurance</p>
                             </div>
+                            <Link to="/trainers#trainersAnchor">
                             <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
+                            </Link>
                         </div>
                     </div>
                     <div className="trainers-item">
@@ -166,7 +200,9 @@ const SiteMainPage = () => {
                             <h5>EMILY</h5>
                             <p>Specializing in Crossfit</p>
                         </div>
+                        <Link to="/trainers#trainersAnchor">
                         <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
+                        </Link>
                     </div>
                 </div>
                 <div className="main-page-new-heading">
@@ -209,10 +245,10 @@ const SiteMainPage = () => {
                         <p>Crossfit Class</p>
                     </div>
                 </div>
-                <VideoComponentAd/>
-                <FormContainer />
-                <div  className="form-empty-container"/>
-                <FooterComponent />
+                <VideoComponentAd />
+                <FormContainer/>
+                <div className="form-empty-container" id="footerAnchor"/>
+                <FooterComponent/>
             </div>
         </div>
     )

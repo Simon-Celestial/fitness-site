@@ -47,6 +47,18 @@
     gap: 30px;
     padding-top: 50px;
 }
+.yearly-plan-mark {
+    display: flex;
+    width: auto;
+    height: auto;
+    background: greenyellow;
+    top: -14px;
+    position: absolute;
+    left: 40%;
+}
+.yearly-plan-mark p {
+    font-size: 20px!important;
+}
 
 .membership-containers p {
     font-size: 40px;
@@ -129,5 +141,15 @@
     }
     .plans-main-content {
         padding-bottom: 20px;
+    }
+    .membership-containers p {
+        font-size: 25px;
+    }
+    .yearly-plan-mark {
+        top: -9px;
+
+    }
+    .yearly-plan-mark p {
+    font-size: 14px!important;
     }
 }

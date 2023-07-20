@@ -2,7 +2,6 @@ import "./TrainersPage.css";
 import FixedMenu from "../../Components/FixedMenu/FixedMenu";
 import NavigationMenu from "../../Components/NavigationMenu/NavigationMenu";
 import FooterComponent from "../../Components/FooterComponent/FooterComponent";
-import React from "react";
 import fitnessBackImg from "../../Assets/images/fitness-man-back.jpg";
 import emilyTrainer from "../../Assets/images/emily-trainer.webp";
 import melTrainer from "../../Assets/images/mel-trainer.webp";
@@ -13,10 +12,22 @@ import hannaTrainer from "../../Assets/images/hanna-trainer.webp";
 import jeremyTrainer from "../../Assets/images/jeremy-trainer.webp";
 import marinaTrainer from "../../Assets/images/marina-trainer.webp";
 import derekTrainer from "../../Assets/images/derek-trainer.webp";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const TrainersPage = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash === "#trainersAnchor") {
+            const element = document.getElementById("trainersAnchor");
+            if (element) {
+                element.scrollIntoView();
+            }
+        }
+}, [location]);
     return (
-        <div className="trainers-wrapper">
+        <div className="trainers-wrapper" id="trainersAnchor">
             <FixedMenu/>
             <NavigationMenu/>
             <div className="trainers-main-content">
@@ -170,12 +181,7 @@ const TrainersPage = () => {
                     </div>
                     <div className="trainers-classes-block">
                         <p>
-                            I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.
-                        </p>
-                        <div className="classes-button-block">
-                            <button>In Person Classes</button>
-                            <button>Online Classes</button>
-                        </div>
+                            All of our trainers are world class certified. And ready to help at any time!                        </p>
                     </div>
                 </div>
             </div>

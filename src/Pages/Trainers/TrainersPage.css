@@ -157,28 +157,6 @@
     text-align: center;
 }
 
-.classes-button-block {
-    display: flex;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.classes-button-block button {
-    width: 180px;
-    height: 40px;
-    cursor: pointer;
-    transition: 0.3s;
-    background: var(--green-color);
-    border-radius: 20px 0 20px 20px;
-}
-
-.classes-button-block button:hover {
-    background: black;
-    color: var(--green-color);
-}
-
 @media only screen and (max-width: 1550px) {
     .fitness-back-img {
         width: 250px;
@@ -201,21 +179,24 @@
 
     .fitness-back-img {
         width: 250px;
-        height: 200px;
-        top: 352px;
-        right: 39%;
-        border-radius: 20px;
+        height: 300px;
+        right: 8%;
+        top: 128px;
     }
 
     .trainers-colored-text-container {
         text-align: center;
     }
 }
+@media only screen and (max-width: 1100px) {
+    .fitness-back-img {
+        right: 1%;
+    }
+}
+
 
 @media only screen and (max-width: 1000px) {
-    .fitness-back-img {
-        right: 36%;
-    }
+
 
     .trainers-info-text {
         padding: 140px 0 80px 0;
@@ -225,10 +206,19 @@
         font-size: 40px;
     }
 }
+@media only screen and (max-width: 930px) {
+    .fitness-back-img {
+        width: 180px;
+        height: 230px;
+        top: 150px;
+    }
+}
+
 
 @media only screen and (max-width: 800px) {
     .fitness-back-img {
-        right: 28%;
+        width: 150px;
+        height: 200px;
     }
 
     .trainers-info-row {
@@ -265,9 +255,9 @@
 
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 720px) {
     .fitness-back-img {
-        right: 28%;
+        display: none;
     }
 }
 
@@ -314,11 +304,6 @@
 
     .trainers-photo-info-block {
         padding-bottom: 20px;
-    }
-
-    .classes-button-block {
-        flex-direction: column;
-        gap: 10px;
     }
 
 }
