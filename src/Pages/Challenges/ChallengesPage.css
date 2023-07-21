@@ -28,6 +28,7 @@
     width: auto;
     height: auto;
     margin-right: 150px;
+    animation: fadeInRight 1s ease-in-out;
 
 }
 
@@ -45,7 +46,9 @@
     top: 400px;
     right: 20%;
     border-radius: 45% 45% 0 0;
+    animation: appearFromLeft 1s ease-in-out;
 }
+
 .challenger-offer-block {
     display: flex;
     width: 100%;

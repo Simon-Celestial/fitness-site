@@ -54,6 +54,9 @@
     padding: 5px;
     gap: 10px;
 }
+.animated-block {
+    animation: fadeInRight 1s ease-in-out;
+}
 
 .main-page-container-block h2 {
     font-size: 42px;
@@ -154,6 +157,7 @@
     height: 100%;
     margin-top: 100px;
     border-radius: 20px;
+    animation: fadeInUp 1s ease-in-out;
 
 }
 
@@ -827,7 +831,7 @@
     }
 
     .second-container-image-block img:nth-child(1) {
-        height: 320px;
+        height: 380px;
         width: 290px;
     }
 

@@ -38,9 +38,7 @@ const GroupsPage = () => {
                             <br/>
                             COMMUNITY
                         </b>
-                        <p>I'm a paragraph. Click here to add your own text
-                            and edit me. Let your users get to know
-                            you</p>
+                        <p>Embark on a journey towards a healthier and fitter lifestyle.</p>
                     </div>
                 </div>
                 <div className="groups-feed-wrapper">
@@ -85,6 +83,7 @@ const GroupsPage = () => {
                              <div className="suggested-groups-list-block">
                                  <b>Suggested Groups</b>
                                  <div className="suggested-groups-item">
+                                     <button>Join</button>
                                      <img src={groupOneImg} alt="group"/>
                                      <div className="group-name">
                                          <p>Stronger Together</p>
@@ -96,9 +95,10 @@ const GroupsPage = () => {
 
                                  </div>
                                  <div className="suggested-groups-item">
+                                     <button>Join</button>
                                      <img src={groupTwoImg} alt="group"/>
                                      <div className="group-name">
-                                         <p>Stronger Together</p>
+                                         <p>Let's Talk Strength</p>
                                          <div className="group-info">
                                              <p>Public</p>
                                              <p>1 Member</p>
@@ -107,9 +107,10 @@ const GroupsPage = () => {
 
                                  </div>
                                  <div className="suggested-groups-item">
+                                     <button>Join</button>
                                      <img src={groupThreeImg} alt="group"/>
                                      <div className="group-name">
-                                         <p>Stronger Together</p>
+                                         <p>Daily Motivation Tips</p>
                                          <div className="group-info">
                                              <p>Public</p>
                                              <p>1 Member</p>

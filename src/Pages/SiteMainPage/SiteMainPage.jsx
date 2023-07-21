@@ -18,6 +18,7 @@ import FormContainer from "../../Components/FormContainer/FormContainer";
 import FooterComponent from "../../Components/FooterComponent/FooterComponent";
 import {Link, useLocation} from "react-router-dom";
 import {useEffect} from "react";
+import "../../Animation.css";
 
 
 const SiteMainPage = () => {
@@ -51,7 +52,7 @@ const SiteMainPage = () => {
             <NavigationMenu/>
             <div className="main-page-content">
                 <div className="main-page-container">
-                    <div className="main-page-container-block">
+                    <div className="main-page-container-block animated-block">
                         <h2>Get Fit</h2>
                         <h1>You Can</h1>
                         <h1>& You Will</h1>
@@ -93,7 +94,9 @@ const SiteMainPage = () => {
                                     <p>Locations</p>
                                 </div>
                             </div>
+                            <Link to="/services#servicesAnchor">
                             <button type="button">View Our Services</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

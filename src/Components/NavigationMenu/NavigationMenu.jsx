@@ -67,8 +67,8 @@ const NavigationMenu = () => {
                     </div>
                 </div>
                 <div className="nav-container">
-                    <Link to="/">
-                        <p>Home</p>
+                    <Link to="/services#servicesAnchor">
+                        <p>Services</p>
                     </Link>
                     <Link to="/challenges">
                         <p>Challenges</p>

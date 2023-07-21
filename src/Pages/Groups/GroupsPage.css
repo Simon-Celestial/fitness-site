@@ -33,7 +33,7 @@
     width: auto;
     height: auto;
     align-items: center;
-
+    animation: fadeInRight 2s linear;
 }
 
 .groups-colored-text-container b {
@@ -44,6 +44,7 @@
 .groups-colored-text-container p {
     font-size: 30px;
     width: 400px;
+    text-align: center;
 }
 
 .groups-feed-wrapper {
@@ -212,6 +213,25 @@
     height: auto;
     align-items: center;
     gap: 10px;
+    position: relative;
+}
+.suggested-groups-item:hover button {
+    display: block;
+    right: -5px;
+
+}
+.suggested-groups-item button {
+    display: none;
+    width: 100px;
+    z-index: 5;
+    height: 42px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
 }
 
 .suggested-groups-item img {
@@ -228,13 +248,16 @@
 }
 
 .group-name p {
-    font-size: 15px;
+    font-size: 18px;
     margin: 0;
+    text-align: start;
+    white-space: nowrap;
 }
+
 
 .group-info {
     display: flex;
-    width: auto;
+    width: 100px;
     height: auto;
     justify-content: space-between;
 }
@@ -266,7 +289,7 @@
     }
 
     .suggested-groups-item {
-        justify-content: center;
+        justify-content: start;
     }
 
     .feed-blocks-item:nth-child(2) {
@@ -285,6 +308,9 @@
     .groups-search-box input {
         width: 165px;
     }
+}
+.suggested-groups-item button {
+    right: 0;
 }
 
     @media only screen and (max-width: 850px) {
@@ -337,6 +363,9 @@
         }
         .groups-search-box input {
             width: 200px;
+        }
+        .suggested-groups-item button {
+            right: 10px;
         }
     }
 @media only screen and (max-width: 800px) {

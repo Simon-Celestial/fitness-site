@@ -8,7 +8,10 @@
     z-index: 5;
     background: greenyellow;
     border-radius: 50px 0 0 0;
+    animation: fadeInLeft 1s ease-in-out;
+
 }
+
 
 .ads-items {
     display: flex;

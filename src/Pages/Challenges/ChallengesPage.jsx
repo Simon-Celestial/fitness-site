@@ -7,6 +7,7 @@ import ChallengeItem from "./ChallengeItem";
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 
+
 const ChallengesPage = () => {
     const location = useLocation();
 

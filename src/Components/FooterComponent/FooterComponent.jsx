@@ -4,10 +4,6 @@ import React, {useRef} from "react";
 import "../FooterComponent/FooterComponent.css";
 import {Link, useNavigate} from "react-router-dom";
 
-
-
-
-
 const FooterComponent = () => {
     const navigate = useNavigate();
     const ref = useRef(null);
@@ -70,8 +66,8 @@ const FooterComponent = () => {
                         <div className="footer-selection-block">
                             <b>MENU</b>
                             <div className="footer-selection-items">
-                                <Link to="/#homeAnchor">
-                                <p>Home</p>
+                                <Link to="/services#servicesAnchor">
+                                    <p>Services</p>
                                 </Link>
                                 <Link to="/challenges#challengesAnchor">
                                 <p>Challenges</p>

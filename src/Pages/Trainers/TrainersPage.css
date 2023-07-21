@@ -25,6 +25,10 @@
     align-items: center;
     justify-content: center;
     background: var(--pink-color);
+
+}
+.trainers-colored-text-container {
+    animation: fadeInRight 2s linear;
 }
 
 .trainers-colored-text-container b {
@@ -34,6 +38,7 @@
 .trainers-colored-text-container p {
     font-size: 30px;
     width: 400px;
+
 }
 
 .fitness-back-img {
@@ -43,6 +48,7 @@
     top: 400px;
     right: 30%;
     border-radius: 45% 45% 0 0;
+    animation: appearFromLeft 2s ease;
 }
 
 .trainers-info-container {
