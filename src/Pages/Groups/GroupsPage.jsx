@@ -2,7 +2,7 @@ import "./GroupsPage.css";
 import FixedMenu from "../../Components/FixedMenu/FixedMenu";
 import NavigationMenu from "../../Components/NavigationMenu/NavigationMenu";
 import FooterComponent from "../../Components/FooterComponent/FooterComponent";
-import React, {useEffect} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import manUser from "../../Assets/images/man-user.png";
 import videoCamera from "../../Assets/images/video-camera.png";
 import photoCamera from "../../Assets/images/camera.png";
@@ -13,23 +13,23 @@ import groupThreeImg from "../../Assets/images/group-3.webp";
 import {useLocation} from "react-router-dom";
 import GroupsItems from "./GroupsItems";
 
-const GroupsItem = [
+const groupItems = [
     {
-        image: {groupOneImg},
+        image: groupOneImg,
         name: "Stronger Together",
     },
     {
-        image: {groupTwoImg},
+        image: groupTwoImg,
         name: "Let's Talk Strength",
     },
     {
-        image: {groupThreeImg},
+        image: groupThreeImg,
         name: "Daily Motivation Tips",
     },
 ];
 const GroupsPage = () => {
     const location = useLocation();
-
+    const [searchValue, setSearchValue] = useState("");
     useEffect(() => {
 
         if (location.hash === "#groupsAnchor") {
@@ -40,6 +40,11 @@ const GroupsPage = () => {
         }
 
     }, [location]);
+
+    const filteredGroups = useMemo(() => groupItems.filter(it => it.name
+            .toLowerCase()
+            .includes(searchValue.toLowerCase()))
+        , [searchValue]);
     return (
         <div className="groups-wrapper" id="groupsAnchor">
             <FixedMenu/>
@@ -87,24 +92,31 @@ const GroupsPage = () => {
 
                         </div>
                         <div className="feed-container-blocks">
-                         <div className="suggested-groups-block">
-                             <div className="groups-search-box-wrapper">
-                             <div className="groups-search-box">
-                                 <img src={searchImg} alt="search"/>
-                                 <input type="text" placeholder="Search"/>
-                             </div>
-                             </div>
-                             <div className="suggested-groups-list-block">
-                                 <b>Suggested Groups</b>
-                                 {GroupsItem.map((item, i) => {
-                                     return <GroupsItems
-                                         key={`${i}${item.name}`}
-                                         {...item}
-                                     />
-                                 })
-                                 }
-                             </div>
-                         </div>
+                            <div className="suggested-groups-block">
+                                <div className="groups-search-box-wrapper">
+                                    <div className="groups-search-box">
+                                        <img src={searchImg} alt="search"/>
+                                        <input type="text" placeholder="Search"
+                                               onInput={(ev) => setSearchValue(ev.target.value)}/>
+                                    </div>
+                                </div>
+                                <div className="suggested-groups-list-block">
+                                    <b>Suggested Groups</b>
+                                    {filteredGroups.map((item, i) => {
+                                        return <GroupsItems
+                                            key={`${i}${item.name}`}
+                                            {...item}
+                                        />
+                                    })
+                                    }
+                                    {
+                                        filteredGroups.length === 0 && <div className="no-groups-found">
+                                            <b>No results to show</b>
+                                            <p>No groups match your search. Double-check the name and try again.</p>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -114,5 +126,4 @@ const GroupsPage = () => {
         </div>
     )
 }
-
 export default GroupsPage;
