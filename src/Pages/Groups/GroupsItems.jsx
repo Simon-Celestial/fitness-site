@@ -1,9 +1,6 @@
 import React from "react";
 
-const GroupsItems = ({
-                          image,
-                          name,
-                      }) => {
+const GroupsItems = ({image,name}) => {
     return (
         <div className="suggested-groups-item">
             <button>Join</button>

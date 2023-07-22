@@ -4,10 +4,21 @@ import youtubeImg from "../../Assets/images/youtube.png";
 import tikTokImg from "../../Assets/images/tik-tok.png";
 import instagramImg from "../../Assets/images/instagram.png";
 import chatImg from "../../Assets/images/live-chat.png";
+import arrowUP from "../../Assets/images/verify.png";
 
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+};
 const FixedMenu = () => {
+
     return (
     <div className="fixed-menu">
+        <div className="circle-menu-arrow" onClick={scrollToTop}>
+            <img src={arrowUP} alt="arrow"/>
+        </div>
         <div className="vertical-fixed-block">
             <a href="https://www.facebook.com/wix" target="_blank" rel="next">
             <img src={facebookImg} alt="facebook"/>

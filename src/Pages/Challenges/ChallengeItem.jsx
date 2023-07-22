@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 const ChallengeItem = (props) => {
   return (
     <div className="challenges-offer-items">
@@ -6,7 +8,9 @@ const ChallengeItem = (props) => {
         <br />
         {props.bottomText}
       </b>
+        <Link to="/#formAnchor">
       <button type="button">Join now</button>
+        </Link>
     </div>
   );
 };

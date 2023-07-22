@@ -100,7 +100,7 @@
 
 .trainers-info-row-container {
     display: flex;
-    width: 240px;
+    width: 350px;
     height: auto;
     flex-direction: column;
     align-items: center;
@@ -189,6 +189,9 @@
         right: 8%;
         top: 128px;
     }
+    .trainers-info-row-container {
+        width: 320px;
+    }
 
     .trainers-colored-text-container {
         text-align: center;
@@ -197,6 +200,12 @@
 @media only screen and (max-width: 1100px) {
     .fitness-back-img {
         right: 1%;
+    }
+    .trainers-info-row-container {
+        width: 250px;
+    }
+    .trainers-row-photo-item p {
+        font-size: 16px;
     }
 }
 

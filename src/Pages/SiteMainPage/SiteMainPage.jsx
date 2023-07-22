@@ -19,7 +19,16 @@ import FooterComponent from "../../Components/FooterComponent/FooterComponent";
 import {Link, useLocation} from "react-router-dom";
 import {useEffect} from "react";
 import "../../Animation.css";
+import InfoBlock from "./InfoBlock";
 
+const infoBlockArr = [
+    {
+        italicText: "In-person fitness classes offer a wide range of benefits that can enhance your overall health, fitness, and well-being.",
+    },
+    {
+        italicText: "Online fitness classes provide several advantages for individuals looking to stay active, fit, and healthy.",
+    },
+];
 
 const SiteMainPage = () => {
     const location = useLocation();
@@ -146,14 +155,13 @@ const SiteMainPage = () => {
                         </b>
                         <p>Our studio classes stream live so you can feel the studio wherever you are.</p>
                         <div className="classes-selection-block">
-                            <div className="classes-selection-item">
-                                <i>In-person fitness classes offer a wide range of benefits that can enhance your
-                                    overall health, fitness, and well-being.</i>
-                            </div>
-                            <div className="classes-selection-item">
-                                <i>Online fitness classes provide several advantages for individuals looking to stay
-                                    active, fit, and healthy.</i>
-                            </div>
+                            {infoBlockArr.map((item, i) => {
+                                return <InfoBlock
+                                    key={i}
+                                    {...item}
+                                />
+                            })
+                            }
                         </div>
                     </div>
                 </div>
