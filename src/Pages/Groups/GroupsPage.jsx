@@ -11,8 +11,22 @@ import groupOneImg from "../../Assets/images/group-1.webp";
 import groupTwoImg from "../../Assets/images/group-2.webp";
 import groupThreeImg from "../../Assets/images/group-3.webp";
 import {useLocation} from "react-router-dom";
+import GroupsItems from "./GroupsItems";
 
-
+const GroupsItem = [
+    {
+        image: {groupOneImg},
+        name: "Stronger Together",
+    },
+    {
+        image: {groupTwoImg},
+        name: "Let's Talk Strength",
+    },
+    {
+        image: {groupThreeImg},
+        name: "Daily Motivation Tips",
+    },
+];
 const GroupsPage = () => {
     const location = useLocation();
 
@@ -82,42 +96,13 @@ const GroupsPage = () => {
                              </div>
                              <div className="suggested-groups-list-block">
                                  <b>Suggested Groups</b>
-                                 <div className="suggested-groups-item">
-                                     <button>Join</button>
-                                     <img src={groupOneImg} alt="group"/>
-                                     <div className="group-name">
-                                         <p>Stronger Together</p>
-                                         <div className="group-info">
-                                             <p>Public</p>
-                                             <p>1 Member</p>
-                                         </div>
-                                     </div>
-
-                                 </div>
-                                 <div className="suggested-groups-item">
-                                     <button>Join</button>
-                                     <img src={groupTwoImg} alt="group"/>
-                                     <div className="group-name">
-                                         <p>Let's Talk Strength</p>
-                                         <div className="group-info">
-                                             <p>Public</p>
-                                             <p>1 Member</p>
-                                         </div>
-                                     </div>
-
-                                 </div>
-                                 <div className="suggested-groups-item">
-                                     <button>Join</button>
-                                     <img src={groupThreeImg} alt="group"/>
-                                     <div className="group-name">
-                                         <p>Daily Motivation Tips</p>
-                                         <div className="group-info">
-                                             <p>Public</p>
-                                             <p>1 Member</p>
-                                         </div>
-                                     </div>
-
-                                 </div>
+                                 {GroupsItem.map((item, i) => {
+                                     return <GroupsItems
+                                         key={`${i}${item.name}`}
+                                         {...item}
+                                     />
+                                 })
+                                 }
                              </div>
                          </div>
                         </div>

@@ -10,73 +10,72 @@ import ServicesItem from "./ServicesItem";
 const servicesItem = [
     {
         type: "Strength",
-        description: "Use this area to describe one of your services.",
+        description: "Strength training may enhance your quality of life.",
         days: "Mon, Wed, Thu, Fri",
         duration: "2hr",
         price: "20$"
     },
     {
         type: "Hiit",
-        description: "Use this area to describe one of your services.",
+        description: "Hiit may provide the same health benefits as regular exercise.",
         days: "Mon, Wed, Thu",
         duration: "1hr",
         price: "20$"
     },
     {
         type: "Yoga",
-        description: "Use this area to describe one of your services.",
+        description: "Yoga improves strength, balance and flexibility.",
         days: "Mon, Thu, Fri",
         duration: "1hr",
         price: "30$"
     },
     {
         type: "Meditation",
-        description: "Use this area to describe one of your services.",
+        description: "Meditation is a simple, fast way to reduce stress.",
         days: "Mon, Wed, Thu",
         duration: "1hr",
         price: "30$"
     },
     {
         type: "Cardio",
-        description: "Use this area to describe one of your services.",
+        description: "Cardio exercise is activity that increases your heart rate.",
         days: "Mon, Wed, Thu, Fri",
         duration: "45min",
         price: "20$"
     },
     {
         type: "Online Strength",
-        description: "Use this area to describe one of your services.",
+        description: "Join Strength online classes.",
         days: "",
         duration: "",
         price: "15$"
     },
     {
         type: "Online Hiit",
-        description: "Use this area to describe one of your services.",
+        description: "Join Hiit online classes.",
         days: "Mon, Wed, Thu, Fri",
         duration: "1hr",
         price: "20$"
     },
     {
         type: "Online Yoga",
-        description: "Use this area to describe one of your services.",
+        description: "Join Yoga online classes.",
         days: "Mon, Thu, Fri",
         duration: "1hr",
         price: "10$"
     },
     {
         type: "Online Meditation",
-        description: "Use this area to describe one of your services.",
+        description: "Join Meditation online classes.",
         days: "Mon, Thu, Fri",
         duration: "3hr",
         price: "30$"
     },
     {
         type: "Online Cardio",
-        description: "Use this area to describe one of your services.",
+        description: "Join Cardio online classes.",
         days: "Mon, Fri",
         duration: "45min",
-        duration2: "45min",
         price: "10$",
         borderBottom: true,
     }
@@ -116,14 +115,10 @@ const ServicesPage = () => {
                     {servicesItem.map((item, i) => {
                         return <ServicesItem
                             key={`${i}${item.description}`}
-                            days={item.days}
-                            price={item.price}
-                            type={item.type}
-                            description={item.description}
+                            {...item}
                         />
                     })
                     }
-
                 </div>
                 <PlansComponent/>
             </div>
