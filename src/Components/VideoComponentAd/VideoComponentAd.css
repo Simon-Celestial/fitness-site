@@ -41,7 +41,8 @@
     height: 100px;
     border-radius: 0 50px 0 0;
     align-items: center;
-    padding: 0 50px;
+    padding: 10px 50px;
+    gap: 10px;
 
 }
 .info-block .info-block-item {
@@ -56,7 +57,12 @@
     width: 60px;
     height: 60px;
 }
-
+@media only screen and (max-width: 1250px) {
+    .info-block .info-block-item img {
+        width: 40px;
+        height: 40px;
+    }
+}
 @media only screen and (max-width: 1150px) {
     .main-page-video-container {
         width: 500px;
