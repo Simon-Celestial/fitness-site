@@ -125,6 +125,7 @@
 }
 .footer-selection-items p {
     cursor: pointer;
+    color: black;
 }
 .footer-selection-block button {
     width: 180px;

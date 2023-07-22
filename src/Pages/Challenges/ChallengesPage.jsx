@@ -1,4 +1,4 @@
-import  "./ChallengesPage.css";
+import "./ChallengesPage.css";
 import FixedMenu from "../../Components/FixedMenu/FixedMenu";
 import NavigationMenu from "../../Components/NavigationMenu/NavigationMenu";
 import FooterComponent from "../../Components/FooterComponent/FooterComponent";
@@ -21,6 +21,7 @@ const ChallengesPage = () => {
         }
 
     }, [location]);
+
     let myChallengesArray = [
         {
             upText: "Get Marathon",
@@ -28,7 +29,7 @@ const ChallengesPage = () => {
         },
         {
             upText: "Running for",
-            bottomText: "Begginers"
+            bottomText: "Beginners"
         },
         {
             upText: "5k Running",
@@ -38,27 +39,28 @@ const ChallengesPage = () => {
 
     return (
         <div className="challenges-wrapper" id="challengesAnchor">
-            <FixedMenu />
-            <NavigationMenu />
+            <FixedMenu/>
+            <NavigationMenu/>
             <div className="challenges-main-content">
-            <div className="challenger-colored-block">
-                <div className="colored-text-container">
-                   <b>GET OUT THERE
-                       <br/>
-                       and <i>Run</i></b>
-                    <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you</p>
+                <div className="challenger-colored-block">
+                    <div className="colored-text-container">
+                        <b>GET OUT THERE
+                            <br/>
+                            and <i>Run</i></b>
+                        <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know
+                            you</p>
+                    </div>
                 </div>
-            </div>
                 <img src={runningImg} alt="running" className="running-img"/>
                 <div className="challenger-offer-block">
-                   { myChallengesArray.map(item => {
-                      return <ChallengeItem  upText={item.upText} bottomText={item.bottomText} />
+                    {myChallengesArray.map(item => {
+                        return <ChallengeItem upText={item.upText} bottomText={item.bottomText}/>
                     })
-                }
+                    }
                 </div>
             </div>
-            <FooterComponent />
-            
+            <FooterComponent/>
+
         </div>
     )
 }

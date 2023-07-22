@@ -12,7 +12,9 @@
     width: auto;
     align-items: center;
 }
-
+.nav-container p {
+    color: black;
+}
 .nav-container:nth-child(1) img {
     width: 60px;
     height: 60px;
@@ -221,6 +223,7 @@
     pointer-events: none;
     gap: 20px;
     padding-top: 30px;
+    padding-bottom: 400px;
 }
 .nav-container-mobile.open {
     opacity: 1;

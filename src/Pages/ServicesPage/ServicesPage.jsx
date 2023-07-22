@@ -5,8 +5,85 @@ import FooterComponent from "../../Components/FooterComponent/FooterComponent";
 import PlansComponent from "../../Components/PlansComponent/PlansComponent";
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
+import ServicesItem from "./ServicesItem";
+
+const servicesItem = [
+    {
+        type: "Strength",
+        description: "Use this area to describe one of your services.",
+        days: "Mon, Wed, Thu, Fri",
+        duration: "2hr",
+        price: "20$"
+    },
+    {
+        type: "Hiit",
+        description: "Use this area to describe one of your services.",
+        days: "Mon, Wed, Thu",
+        duration: "1hr",
+        price: "20$"
+    },
+    {
+        type: "Yoga",
+        description: "Use this area to describe one of your services.",
+        days: "Mon, Thu, Fri",
+        duration: "1hr",
+        price: "30$"
+    },
+    {
+        type: "Meditation",
+        description: "Use this area to describe one of your services.",
+        days: "Mon, Wed, Thu",
+        duration: "1hr",
+        price: "30$"
+    },
+    {
+        type: "Cardio",
+        description: "Use this area to describe one of your services.",
+        days: "Mon, Wed, Thu, Fri",
+        duration: "45min",
+        price: "20$"
+    },
+    {
+        type: "Online Strength",
+        description: "Use this area to describe one of your services.",
+        days: "",
+        duration: "",
+        price: "15$"
+    },
+    {
+        type: "Online Hiit",
+        description: "Use this area to describe one of your services.",
+        days: "Mon, Wed, Thu, Fri",
+        duration: "1hr",
+        price: "20$"
+    },
+    {
+        type: "Online Yoga",
+        description: "Use this area to describe one of your services.",
+        days: "Mon, Thu, Fri",
+        duration: "1hr",
+        price: "10$"
+    },
+    {
+        type: "Online Meditation",
+        description: "Use this area to describe one of your services.",
+        days: "Mon, Thu, Fri",
+        duration: "3hr",
+        price: "30$"
+    },
+    {
+        type: "Online Cardio",
+        description: "Use this area to describe one of your services.",
+        days: "Mon, Fri",
+        duration: "45min",
+        duration2: "45min",
+        price: "10$",
+        borderBottom: true,
+    }
+];
 
 const ServicesPage = () => {
+
     const location = useLocation();
 
     useEffect(() => {
@@ -26,127 +103,29 @@ const ServicesPage = () => {
             <div className="services-main-content">
                 <div className="services-main-text-container">
                     <div className="text-container-block">
-                    <b>CHECK OUT <br/>
-                        ALL<i>  Services</i></b>
-                    <p>I'm a paragraph. Click here to add <br/>
-                        your own text and edit me. Let your <br/>
-                        users get to know you
-                    </p>
+                        <b>CHECK OUT <br/>
+                            ALL<i> Services</i></b>
+                        <p>I'm a paragraph. Click here to add <br/>
+                            your own text and edit me. Let your <br/>
+                            users get to know you
+                        </p>
                     </div>
                 </div>
                 <b>Classes</b>
                 <div className="services-classes-container">
-                <div className="classes-block">
-                    <div className="classes-block-item">
-                        <b>Strength</b>
-                        <p>Use this area to describe one of your services.</p>
-                    </div>
-                    <div className="classes-block-item">
-                        <p>Mon, Wed, Thu, Fri</p>
-                        <p>2hr</p>
-                        <b>20$</b>
-                    </div>
-                </div>
-                    <div className="classes-block">
-                        <div className="classes-block-item">
-                            <b>Hiit</b>
-                            <p>Use this area to describe one of your services.</p>
-                        </div>
-                        <div className="classes-block-item">
-                            <p>Mon, Wed, Thu</p>
-                            <p>1hr</p>
-                            <b>20$</b>
-                        </div>
-                    </div>
-                    <div className="classes-block">
-                        <div className="classes-block-item">
-                            <b>Yoga</b>
-                            <p>Use this area to describe one of your services.</p>
-                        </div>
-                        <div className="classes-block-item">
-                            <p>Mon, Thu, Fri</p>
-                            <p>1hr</p>
-                            <b>30$</b>
+                    {servicesItem.map((item, i) => {
+                        return <ServicesItem
+                            key={`${i}${item.description}`}
+                            days={item.days}
+                            price={item.price}
+                            type={item.type}
+                            description={item.description}
+                        />
+                    })
+                    }
 
-                        </div>
-                    </div>
-                    <div className="classes-block">
-                        <div className="classes-block-item">
-                            <b>Meditation</b>
-                            <p>Use this area to describe one of your services.</p>
-                        </div>
-                        <div className="classes-block-item">
-                            <p>Mon, Wed, Thu</p>
-                            <p>3hr</p>
-                            <b>40$</b>
-                        </div>
-                    </div>
-                    <div className="classes-block">
-                        <div className="classes-block-item">
-                            <b>Cardio</b>
-                            <p>Use this area to describe one of your services.</p>
-                        </div>
-                        <div className="classes-block-item">
-                            <p>Mon, Wed, Thu, Fri</p>
-                            <p>45min</p>
-                            <b>20$</b>
-                        </div>
-                    </div>
-                    <div className="classes-block">
-                        <div className="classes-block-item">
-                            <b>Online Strength</b>
-                            <p>Use this area to describe one of your services.</p>
-                        </div>
-                        <div className="classes-block-item">
-                            <b>15$</b>
-                        </div>
-                    </div>
-                    <div className="classes-block">
-                        <div className="classes-block-item">
-                            <b>Online Hiit</b>
-                            <p>Use this area to describe one of your services.</p>
-                        </div>
-                        <div className="classes-block-item">
-                            <p>Mon, Wed, Thu, Fri</p>
-                            <p>1hr</p>
-                            <b>15$</b>
-                        </div>
-                    </div>
-                    <div className="classes-block">
-                        <div className="classes-block-item">
-                            <b>Online Yoga</b>
-                            <p>Use this area to describe one of your services.</p>
-                        </div>
-                        <div className="classes-block-item">
-                            <p>Mon, Thu, Fri</p>
-                            <p>1hr</p>
-                            <b>10$</b>
-                        </div>
-                    </div>
-                    <div className="classes-block">
-                        <div className="classes-block-item">
-                            <b>Online Meditation</b>
-                            <p>Use this area to describe one of your services.</p>
-                        </div>
-                        <div className="classes-block-item">
-                            <p>Mon, Thu, Fri</p>
-                            <p>3hr</p>
-                            <b>30$</b>
-                        </div>
-                    </div>
-                    <div className="classes-block classes-block-last-item">
-                        <div className="classes-block-item">
-                            <b>Online Cardio</b>
-                            <p>Use this area to describe one of your services.</p>
-                        </div>
-                        <div className="classes-block-item">
-                            <p>Mon, Fri</p>
-                            <p>45min</p>
-                            <b>10$</b>
-                        </div>
-                    </div>
                 </div>
-                <PlansComponent />
+                <PlansComponent/>
             </div>
             <FooterComponent/>
         </div>
