@@ -1,9 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
+import NavigationModal from "../../Components/NavigationMenu/NavigationModal";
+
 
 const GroupsItems = ({image,name}) => {
+    const [showModal, setShowModal] = useState(false);
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
     return (
         <div className="suggested-groups-item">
-            <button>Join</button>
+            <button onClick={handleOpenModal} className="suggested-group-button">Join</button>
             <img src={image} alt="group"/>
             <div className="group-name">
                 <p>{name}</p>
@@ -12,7 +21,7 @@ const GroupsItems = ({image,name}) => {
                     <p>1 Member</p>
                 </div>
             </div>
-
+            {showModal && <NavigationModal onClose={handleCloseModal} />}
         </div>
     );
 };

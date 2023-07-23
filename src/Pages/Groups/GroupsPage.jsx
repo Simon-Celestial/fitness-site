@@ -12,6 +12,7 @@ import groupTwoImg from "../../Assets/images/group-2.webp";
 import groupThreeImg from "../../Assets/images/group-3.webp";
 import {useLocation} from "react-router-dom";
 import GroupsItems from "./GroupsItems";
+import NavigationModal from "../../Components/NavigationMenu/NavigationModal";
 
 const groupItems = [
     {
@@ -28,6 +29,14 @@ const groupItems = [
     },
 ];
 const GroupsPage = () => {
+    const [showModal, setShowModal] = useState(false);
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
     const location = useLocation();
     const [searchValue, setSearchValue] = useState("");
     useEffect(() => {
@@ -61,26 +70,27 @@ const GroupsPage = () => {
                     </div>
                 </div>
                 <div className="groups-feed-wrapper">
-                    <b>Groups Feed</b>
+                    <b className="group-feed-text">Groups Feed</b>
                     <div className="feed-container">
                         <div className="feed-container-blocks">
                             <div className="feed-blocks-item">
                                 <img src={manUser} alt="man-user"/>
-                                <div className="feed-sharing-panel">
+                                <div onClick={handleOpenModal} className="feed-sharing-panel">
                                     <p>Share something...</p>
                                 </div>
-                                <button>Create a Post</button>
+                                <button onClick={handleOpenModal}>Create a Post</button>
+                                {showModal && <NavigationModal onClose={handleCloseModal} />}
                             </div>
                             <div className="feed-blocks-item">
-                                <div className="feed-img-text-item">
+                                <div className="feed-img-text-item" onClick={handleOpenModal}>
                                     <img src={photoCamera} alt="photo"/>
                                     <p>Photo</p>
                                 </div>
-                                <div className="feed-img-text-item">
+                                <div className="feed-img-text-item" onClick={handleOpenModal}>
                                     <img src={videoCamera} alt="video"/>
                                     <p>Video</p>
                                 </div>
-                                <div className="feed-img-text-item">
+                                <div className="feed-img-text-item" onClick={handleOpenModal}>
                                     <p>GIF</p>
                                 </div>
                             </div>
@@ -101,7 +111,7 @@ const GroupsPage = () => {
                                     </div>
                                 </div>
                                 <div className="suggested-groups-list-block">
-                                    <b>Suggested Groups</b>
+                                    <b className="suggested-group-name">Suggested Groups</b>
                                     {filteredGroups.map((item, i) => {
                                         return <GroupsItems
                                             key={`${i}${item.name}`}
