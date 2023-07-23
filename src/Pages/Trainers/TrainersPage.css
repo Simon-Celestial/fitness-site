@@ -20,7 +20,7 @@
     width: auto;
     height: auto;
     flex-direction: column;
-    padding: 100px 0;
+    padding: 100px 350px 100px 0;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -175,31 +175,19 @@
 }
 
 @media only screen and (max-width: 1300px) {
-    .trainers-colored-text-container b {
-        font-size: 25px;
-    }
-
-    .trainers-colored-text-container p {
-        font-size: 20px;
-    }
-
     .fitness-back-img {
         width: 250px;
         height: 300px;
-        right: 8%;
-        top: 128px;
+        right: 25%;
     }
     .trainers-info-row-container {
         width: 320px;
     }
 
-    .trainers-colored-text-container {
-        text-align: center;
-    }
 }
 @media only screen and (max-width: 1100px) {
     .fitness-back-img {
-        right: 1%;
+        right: 20%;
     }
     .trainers-info-row-container {
         width: 250px;
@@ -221,21 +209,43 @@
         font-size: 40px;
     }
 }
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 950px) {
+    .trainers-colored-text-container b {
+        font-size: 50px;
+    }
+    .trainers-colored-text-container p {
+        font-size: 20px;
+    }
     .fitness-back-img {
-        width: 180px;
-        height: 230px;
         top: 150px;
+        right: 10%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .trainers-colored-block {
+        padding: 50px 250px 50px 0;
+    }
+    .fitness-back-img {
+        top: 150px;
+        right: 10%;
+        width: 170px;
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .trainers-colored-text-container b {
+        font-size: 30px;
+    }
+    .trainers-colored-text-container p {
+        font-size: 15px;
+        width: 280px;
+    }
+    .fitness-back-img {
+        top: 125px;
     }
 }
 
-
 @media only screen and (max-width: 800px) {
-    .fitness-back-img {
-        width: 150px;
-        height: 200px;
-    }
-
     .trainers-info-row {
         flex-direction: column;
         gap: 20px;
@@ -270,20 +280,7 @@
 
 }
 
-@media only screen and (max-width: 720px) {
-    .fitness-back-img {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .fitness-back-img {
-        right: 30%;
-    }
-
-}
-
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 580px) {
     .trainers-colored-text-container p {
         font-size: 16px;
         width: 290px;
@@ -295,6 +292,7 @@
 
     .trainers-colored-block {
         padding: 40px 0;
+        text-align: center;
     }
 
     .trainers-info-text {
