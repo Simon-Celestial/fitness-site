@@ -2,8 +2,8 @@ import "./NavigationMenu.css";
 import brandLogo from "../../Assets/images/siteLogo.png";
 import user from "../../Assets/images/user.png";
 import {Link, useNavigate} from "react-router-dom";
-
 import {useEffect, useMemo, useRef, useState} from "react";
+import NavigationModal from "./NavigationModal";
 
 
 const NavigationMenu = () => {
@@ -12,6 +12,15 @@ const NavigationMenu = () => {
     const navigate = useNavigate();
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [windowWidth, setWindowWidth] = useState(null);
+
+
+    const [showModal, setShowModal] = useState(false);
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
 
 
     useEffect(() => {
@@ -92,12 +101,12 @@ const NavigationMenu = () => {
                     <div className="nav-log-block">
                         <div className="nav-log-item">
                             <img src={user} alt="user-logo"/>
-
-                            <p>Log In</p>
+                            <p onClick={handleOpenModal}>Log In</p>
                         </div>
                     <Link to="/plans">
-                        <button type="button">Join Now</button>
+                        <button type="button" className="join-button">Join Now</button>
                     </Link>
+                        {showModal && <NavigationModal onClose={handleCloseModal} />}
                     </div>
                 </div>
             </header>
@@ -106,8 +115,9 @@ const NavigationMenu = () => {
                 top: burgerRef?.current?.getBoundingClientRect()?.bottom + 15,
             }}>
                 <div className="nav-log-item menu-log-in">
+                    {showModal && <NavigationModal onClose={handleCloseModal} />}
                     <img src={user} alt="user-logo"/>
-                    <p style={{
+                    <p onClick={handleOpenModal} style={{
                         fontSize: "15px"
                     }}>Log In</p>
                 </div>

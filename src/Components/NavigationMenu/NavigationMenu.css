@@ -103,7 +103,7 @@
     padding-right: 30px;
 }
 
-.nav-log-block button {
+.nav-log-block .join-button {
     width: 105px;
     height: 40px;
     background: greenyellow;
@@ -113,7 +113,7 @@
     transition: 0.3s;
 }
 
-.nav-log-block button:hover {
+.nav-log-block .join-button:hover {
     background: black;
     color: var(--green-color);
 }
@@ -150,6 +150,45 @@
     cursor: pointer;
     color: var(--purple-color);
     scale: 1.1;
+}
+.nav-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 9999999;
+    opacity: 0;
+    transition: 400ms ease;
+    pointer-events: none;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 400px;
+}
+.nav-container-mobile.open {
+    opacity: 1;
+    pointer-events: all;
+}
+.nav-container-mobile.open a {
+    text-decoration: 0;
+}
+.nav-container-mobile.open p {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.nav-container-mobile.open p:focus {
+    background: var(--green-color);
+}
+
+.menu-log-in {
+    margin-right: 15px;
 }
 
 @media only screen and (max-width: 1150px) {
@@ -208,45 +247,7 @@
     }
 }
 
-.nav-container-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    z-index: 99999999;
-    opacity: 0;
-    transition: 400ms ease;
-    pointer-events: none;
-    gap: 20px;
-    padding-top: 30px;
-    padding-bottom: 400px;
-}
-.nav-container-mobile.open {
-    opacity: 1;
-    pointer-events: all;
-}
-.nav-container-mobile.open a {
-    text-decoration: 0;
-}
-.nav-container-mobile.open p {
-    font-size: 28px;
-    margin: 0;
-    font-weight: 400;
-    color: black;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.nav-container-mobile.open p:focus {
-    background: var(--green-color);
-}
 
-.menu-log-in {
-    margin-right: 15px;
-}
 
 @media only screen and (max-width: 320px) {
     .nav-log-block {
