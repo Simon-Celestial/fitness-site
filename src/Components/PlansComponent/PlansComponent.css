@@ -41,20 +41,19 @@
     gap: 30px;
     padding-top: 50px;
 }
-.membership-containers:nth-child(1) {
-    background: #ebecef;
-}
-.yearly-plan-mark {
+.membership-containers:nth-child(1)::after {
+    content: "Best Value";
     display: flex;
     width: auto;
     height: auto;
     background: greenyellow;
-    top: -14px;
+    top: -11px;
     position: absolute;
-    left: 40%;
+    left: 42%;
 }
-.yearly-plan-mark p {
-    font-size: 20px!important;
+.membership-containers:nth-child(1) {
+    background: #ebecef;
+    position: relative;
 }
 
 .membership-containers p {
@@ -142,11 +141,7 @@
     .membership-containers p {
         font-size: 25px;
     }
-    .yearly-plan-mark {
-        top: -9px;
-
-    }
-    .yearly-plan-mark p {
-        font-size: 14px!important;
+    .membership-containers:nth-child(1)::after {
+        left: 38%;
     }
 }

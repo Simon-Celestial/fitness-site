@@ -27,8 +27,7 @@
 .modal-container button {
     width: 150px;
     height: 40px;
-    background: #5595ff;
-    border-radius: 10px;
+    background: black;
     outline: 0;
     border: 0;
     color: white;
@@ -38,7 +37,7 @@
 
 }
 .modal-container button:hover {
-    background: #2170f5;
+    background: #4d4d4d;
 }
 .modal-container i {
     font-weight: 900;
