@@ -3,7 +3,7 @@ import brandLogo from "../../Assets/images/siteLogo.png";
 import user from "../../Assets/images/user.png";
 import {Link, useNavigate} from "react-router-dom";
 import {useEffect, useMemo, useRef, useState} from "react";
-import NavigationModal from "./NavigationModal";
+import LogInModal from "../ModalComponents/LogInModal";
 
 
 const NavigationMenu = () => {
@@ -12,8 +12,6 @@ const NavigationMenu = () => {
     const navigate = useNavigate();
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [windowWidth, setWindowWidth] = useState(null);
-
-
     const [showModal, setShowModal] = useState(false);
     const handleOpenModal = () => {
         setShowModal(true);
@@ -106,7 +104,7 @@ const NavigationMenu = () => {
                     <Link to="/plans">
                         <button type="button" className="join-button">Join Now</button>
                     </Link>
-                        {showModal && <NavigationModal onClose={handleCloseModal} />}
+                        {showModal && <LogInModal onClose={handleCloseModal} />}
                     </div>
                 </div>
             </header>
@@ -115,7 +113,8 @@ const NavigationMenu = () => {
                 top: burgerRef?.current?.getBoundingClientRect()?.bottom + 15,
             }}>
                 <div className="nav-log-item menu-log-in">
-                    {showModal && <NavigationModal onClose={handleCloseModal} />}
+                    {showModal && <LogInModal onClose={handleCloseModal} />}
+
                     <img src={user} alt="user-logo"/>
                     <p onClick={handleOpenModal} style={{
                         fontSize: "15px"

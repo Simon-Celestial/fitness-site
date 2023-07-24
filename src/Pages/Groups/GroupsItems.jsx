@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import NavigationModal from "../../Components/NavigationMenu/NavigationModal";
+import NavigationModal from "../../Components/ModalComponents/NavigationModal";
 
 
 const GroupsItems = ({image,name}) => {

@@ -12,7 +12,7 @@ import groupTwoImg from "../../Assets/images/group-2.webp";
 import groupThreeImg from "../../Assets/images/group-3.webp";
 import {useLocation} from "react-router-dom";
 import GroupsItems from "./GroupsItems";
-import NavigationModal from "../../Components/NavigationMenu/NavigationModal";
+import NavigationModal from "../../Components/ModalComponents/NavigationModal";
 
 const groupItems = [
     {
