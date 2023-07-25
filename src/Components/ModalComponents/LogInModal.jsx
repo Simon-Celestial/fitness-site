@@ -46,6 +46,7 @@ const LogInModal = ({ onClose }) => {
                     <label htmlFor="submit-log-in">
                     <button type="submit" name="submit-log-in" className="login-button">LOGIN</button>
                     </label>
+                    <p onClick={handleOpenModal}>Need to Register?</p>
                 </form>
             </div>
         </div>
