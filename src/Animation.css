@@ -39,3 +39,11 @@
         opacity: 100%;
     }
 }
+@keyframes appearFromCenter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}

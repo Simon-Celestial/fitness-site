@@ -1,12 +1,13 @@
 import "./NavigationMenu.css";
 import brandLogo from "../../Assets/images/siteLogo.png";
 import user from "../../Assets/images/user.png";
-import {Link, useNavigate} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import {useEffect, useMemo, useRef, useState} from "react";
 import LogInModal from "../ModalComponents/LogInModal";
 
 
 const NavigationMenu = () => {
+    const location = useLocation();
     const ref = useRef(null);
     const burgerRef = useRef(null);
     const navigate = useNavigate();
@@ -75,19 +76,19 @@ const NavigationMenu = () => {
                 </div>
                 <div className="nav-container">
                     <Link to="/services#servicesAnchor">
-                        <p>Services</p>
+                        <p style={{fontWeight: location.pathname.startsWith('/services') ? 'bold' : 'normal',}}>Services</p>
                     </Link>
                     <Link to="/challenges">
-                        <p>Challenges</p>
+                        <p style={{fontWeight: location.pathname.startsWith('/challenges') ? 'bold' : 'normal',}}>Challenges</p>
                     </Link>
                     <Link to="/plans">
-                        <p>Plans</p>
+                        <p style={{fontWeight: location.pathname.startsWith('/plans') ? 'bold' : 'normal',}}>Plans</p>
                     </Link>
                     <Link to="/trainers">
-                        <p>Trainers</p>
+                        <p style={{fontWeight: location.pathname.startsWith('/trainers') ? 'bold' : 'normal',}}>Trainers</p>
                     </Link>
                     <Link to="/groups">
-                        <p>Groups</p>
+                        <p style={{fontWeight: location.pathname.startsWith('/groups') ? 'bold' : 'normal',}}>Groups</p>
                     </Link>
                     <div onClick={handleClick}>
                         <a ref={ref} href="#formAnchor">
@@ -101,19 +102,19 @@ const NavigationMenu = () => {
                             <img src={user} alt="user-logo"/>
                             <p onClick={handleOpenModal}>Log In</p>
                         </div>
-                    <Link to="/plans">
-                        <button type="button" className="join-button">Join Now</button>
-                    </Link>
-                        {showModal && <LogInModal onClose={handleCloseModal} />}
+                        <Link to="/plans">
+                            <button type="button" className="join-button">Join Now</button>
+                        </Link>
+                        {showModal && <LogInModal onClose={handleCloseModal}/>}
                     </div>
                 </div>
             </header>
 
             <div className={["nav-container-mobile", burgerOpen ? 'open' : ''].join(' ')} style={{
-                top: burgerRef?.current?.getBoundingClientRect()?.bottom + 15,
+                top: (burgerRef?.current?.getBoundingClientRect()?.bottom || 0) + 15,
             }}>
                 <div className="nav-log-item menu-log-in">
-                    {showModal && <LogInModal onClose={handleCloseModal} />}
+                    {showModal && <LogInModal onClose={handleCloseModal}/>}
 
                     <img src={user} alt="user-logo"/>
                     <p onClick={handleOpenModal} style={{

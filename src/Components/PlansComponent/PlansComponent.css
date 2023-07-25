@@ -27,9 +27,9 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    animation: fadeInUp 1s ease-in-out;
-}
+    animation: appearFromCenter 1s ease-in-out;
 
+}
 .membership-containers {
     display: flex;
     flex-direction: column;

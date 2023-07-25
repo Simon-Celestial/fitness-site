@@ -24,13 +24,12 @@ const FormContainer = () => {
                             <input type="text" name="lastName" tabIndex="2" required/>
                         </label>
                         <label htmlFor="subject">Subject
-                            <input type="text" name="subject" tabIndex="4" required/>
+                            <input type="text" name="subject" tabIndex="4"/>
                         </label>
                     </div>
                 </div>
                 <label htmlFor="text">
-                    Leave us a message...
-                    <textarea name="text" id="textArea" tabIndex="5" required/>
+                    <textarea name="text" id="textArea" tabIndex="5" placeholder="Leave us a message..."/>
                 </label>
                 <button type="submit" tabIndex="6">Submit</button>
             </form>
