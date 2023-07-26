@@ -130,11 +130,6 @@
     transition: 0.3s;
 }
 
-.nav-log-item p:hover {
-    color: var(--purple-color);
-    scale: 1.1;
-}
-
 .nav-container a {
     text-decoration: none;
 }
@@ -142,12 +137,18 @@
 .nav-log-item img {
     width: 25px;
     height: 25px;
-    cursor: pointer;
+    transition: 0.5s;
+}
+.nav-log-item:hover .log-in-entry {
+    rotate: 720deg;
+}
+.nav-log-item:hover>p {
+    color: orange;
 }
 
-.nav-container p:hover {
+.nav-container a>p:hover {
     cursor: pointer;
-    color: var(--purple-color);
+    color: var(--orange-color);
     scale: 1.1;
 }
 .nav-container-mobile {
@@ -163,7 +164,7 @@
     opacity: 0;
     transition: 400ms ease;
     pointer-events: none;
-    gap: 20px;
+    gap: 10px;
     padding-top: 30px;
     padding-bottom: 400px;
 }
@@ -174,8 +175,16 @@
 .nav-container-mobile.open a {
     text-decoration: 0;
 }
-.nav-container-mobile.open p {
-    font-size: 28px;
+.nav-container-mobile.open a>p {
+    font-size: 28px!important;
+    margin: 0;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.menu-log-in>p {
+    font-size: 28px!important;
     margin: 0;
     font-weight: 400;
     color: black;
@@ -195,7 +204,7 @@
         font-size: 16px;
     }
 
-    .nav-log-item p {
+    .nav-log-item>p {
         font-size: 16px;
     }
 

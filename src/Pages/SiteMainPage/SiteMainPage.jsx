@@ -52,7 +52,6 @@ const SiteMainPage = () => {
                 element.scrollIntoView();
             }
         }
-
     }, [location]);
 
     return (
@@ -110,7 +109,7 @@ const SiteMainPage = () => {
                     </div>
                 </div>
                 <div className="main-page-content-heading-block">
-                    <h2><i>Become an </i> UNDERARMOUR</h2>
+                    <h2><i>Become an </i>UNDERARMOUR</h2>
                     <p>Join one of our plans and get access to all of our fitness workouts.</p>
                 </div>
                 <div className="main-page-price-container">

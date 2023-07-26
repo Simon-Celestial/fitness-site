@@ -98,9 +98,9 @@ const NavigationMenu = () => {
                 </div>
                 <div className="nav-container" style={opaqueStyle}>
                     <div className="nav-log-block">
-                        <div className="nav-log-item">
-                            <img src={user} alt="user-logo"/>
-                            <p onClick={handleOpenModal}>Log In</p>
+                        <div className="nav-log-item" onClick={handleOpenModal}>
+                            <img className="log-in-entry" src={user} alt="user-logo"/>
+                            <p>Log In</p>
                         </div>
                         <Link to="/plans">
                             <button type="button" className="join-button">Join Now</button>
@@ -115,13 +115,10 @@ const NavigationMenu = () => {
             }}>
                 <div className="nav-log-item menu-log-in">
                     {showModal && <LogInModal onClose={handleCloseModal}/>}
-
                     <img src={user} alt="user-logo"/>
-                    <p onClick={handleOpenModal} style={{
-                        fontSize: "15px"
-                    }}>Log In</p>
+                    <p onClick={handleOpenModal}>Log In</p>
                 </div>
-                <Link to="/">
+                <Link to="/#homeAnchor">
                     <p>Home</p>
                 </Link>
                 <Link to="/challenges">

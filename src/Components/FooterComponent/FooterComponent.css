@@ -126,6 +126,11 @@
 .footer-selection-items p {
     cursor: pointer;
     color: black;
+    transition: 0.3s;
+}
+.footer-selection-items>a>p:hover {
+    color: var(--purple-color);
+    scale: 1.1;
 }
 .footer-selection-block button {
     width: 180px;
@@ -186,6 +191,7 @@
     .footer-block-item h2 {
         font-size: 29px;
         width: 290px;
+        text-align: center;
     }
     .footer-block-item form button {
         width: 50px;
@@ -198,6 +204,7 @@
     }
     .footer-block-item p {
         font-size: 14px;
+        text-align: center;
     }
     .footer-images-block {
         justify-content: space-between;

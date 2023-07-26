@@ -79,7 +79,7 @@ const GroupsPage = () => {
                                     <p>Share something...</p>
                                 </div>
                                 <button onClick={handleOpenModal}>Create a Post</button>
-                                {showModal && <NavigationModal onClose={handleCloseModal} />}
+                                {showModal && <NavigationModal onClose={handleCloseModal}/>}
                             </div>
                             <div className="feed-blocks-item">
                                 <div className="feed-img-text-item" onClick={handleOpenModal}>
@@ -130,7 +130,6 @@ const GroupsPage = () => {
                         </div>
                     </div>
                 </div>
-
                 <FooterComponent/>
             </div>
         </div>

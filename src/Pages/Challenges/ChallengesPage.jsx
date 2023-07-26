@@ -12,7 +12,6 @@ const ChallengesPage = () => {
     const location = useLocation();
 
     useEffect(() => {
-
         if (location.hash === "#challengesAnchor") {
             const element = document.getElementById("challengesAnchor");
             if (element) {

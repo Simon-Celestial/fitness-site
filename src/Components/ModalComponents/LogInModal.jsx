@@ -39,7 +39,7 @@ const LogInModal = ({ onClose }) => {
                             <input type="checkbox" name="option" className="log-in-check-box"/>
                             Remember Me
                         </label>
-                        <p onClick={handleOpenModal}>Forget Password?</p>
+                        <p onClick={handleOpenModal}>Forgot Password?</p>
                     </div>
                     {showModal && <NavigationModal onClose={handleCloseModal} />}
 

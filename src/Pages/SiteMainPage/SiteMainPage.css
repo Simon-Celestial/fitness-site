@@ -187,6 +187,9 @@
     font-size: 60px;
     margin: 0;
 }
+.main-page-content-heading-block h2>i {
+    margin-right: 5px;
+}
 
 .main-page-content-heading-block p {
     font-size: 25px;
@@ -476,6 +479,7 @@
 .trainers-item-container h5 {
     margin: 0;
     color: blue;
+    font-size: 18px;
 }
 
 .main-page-new-heading {
@@ -506,6 +510,7 @@
 .new-heading-container p {
     font-size: 25px;
     width: 280px;
+    text-align: center;
 }
 
 .main-page-testimonials {
@@ -700,6 +705,8 @@
 
     .new-heading-container b {
         font-size: 40px;
+        text-align: center;
+
     }
 
     .main-page-testimonials {
