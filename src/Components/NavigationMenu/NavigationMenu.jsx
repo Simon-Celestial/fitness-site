@@ -121,21 +121,23 @@ const NavigationMenu = () => {
                     <img src={user} alt="user-logo"/>
                     <p onClick={handleOpenModal}>Log In</p>
                 </div>
-                <Link to="/#homeAnchor">
-                    <p>Home</p>
-                </Link>
-                <Link to="/challenges">
-                    <p>Challenges</p>
-                </Link>
-                <Link to="/plans">
-                    <p>Plans</p>
-                </Link>
-                <Link to="/trainers">
-                    <p>Trainers</p>
-                </Link>
-                <Link to="/groups">
-                    <p>Groups</p>
-                </Link>
+                {
+                    [
+                        ['/', 'Home'],
+                        ['/challenges', 'Challenges'],
+                        ['/plans', 'Plans'],
+                        ['/trainers', 'Trainers'],
+                        ['/groups', 'Groups']
+                    ].map(([path, label]) =>
+                        <Link
+                            key={`id_${path}`}
+                            to={path}
+                            onClick={() => {
+                                if (location.pathname === path) setBurgerOpen(false);
+                            }}
+                        ><p>{label}</p>
+                        </Link>)
+                }
                 <div onClick={handleClick}>
                     <a ref={ref} href="/#formAnchor">
                         <p>Contact</p>
