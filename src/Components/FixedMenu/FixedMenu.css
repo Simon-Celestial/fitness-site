@@ -89,6 +89,7 @@
         height: 120px;
         width: 40px;
         left: 10px;
+        gap: 5px;
     }
     .vertical-fixed-block img {
         height: 20px;

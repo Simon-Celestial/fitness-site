@@ -46,7 +46,7 @@ const SiteMainPage = () => {
                 element.scrollIntoView();
             }
         }
-        if (location.hash === "#formAnchor") {
+        if (location.hash === "/#formAnchor") {
             const element = document.getElementById("formAnchor");
             if (element) {
                 element.scrollIntoView();
@@ -103,7 +103,7 @@ const SiteMainPage = () => {
                                 </div>
                             </div>
                             <Link to="/services#servicesAnchor">
-                            <button type="button">View Our Services</button>
+                                <button type="button">View Our Services</button>
                             </Link>
                         </div>
                     </div>
@@ -122,10 +122,10 @@ const SiteMainPage = () => {
                             <h1>$29.99</h1>
                             <h5>per/month</h5>
                             <Link to="/plans#plansAnchor">
-                            <button type="button" className="monthly-button">
-                                Start 1 Month Free
-                            </button>
-                                </Link>
+                                <button type="button" className="monthly-button">
+                                    Start 1 Month Free
+                                </button>
+                            </Link>
                         </div>
                     </div>
                     <div className="price-container-blocks">
@@ -140,9 +140,9 @@ const SiteMainPage = () => {
                             <h1>$49.99</h1>
                             <h5>per/month</h5>
                             <Link to="/plans#plansAnchor">
-                            <button type="button" className="yearly-button">
-                                Start 1 Month Free
-                            </button>
+                                <button type="button" className="yearly-button">
+                                    Start 1 Month Free
+                                </button>
                             </Link>
                         </div>
                     </div>
@@ -179,7 +179,7 @@ const SiteMainPage = () => {
                             <p>Specializing in Strength</p>
                         </div>
                         <Link to="/trainers#trainersAnchor">
-                        <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
+                            <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
                         </Link>
                     </div>
                     <div className="trainers-items">
@@ -190,7 +190,7 @@ const SiteMainPage = () => {
                                 <p>Specializing in Yoga</p>
                             </div>
                             <Link to="/trainers#trainersAnchor">
-                            <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
+                                <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
                             </Link>
                         </div>
                         <div className="trainers-item">
@@ -200,7 +200,7 @@ const SiteMainPage = () => {
                                 <p>Specializing in Endurance</p>
                             </div>
                             <Link to="/trainers#trainersAnchor">
-                            <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
+                                <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
                             </Link>
                         </div>
                     </div>
@@ -211,7 +211,7 @@ const SiteMainPage = () => {
                             <p>Specializing in Crossfit</p>
                         </div>
                         <Link to="/trainers#trainersAnchor">
-                        <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
+                            <img src={verifyImg} alt="verify-button" className="verify-trainers"/>
                         </Link>
                     </div>
                 </div>
@@ -255,7 +255,7 @@ const SiteMainPage = () => {
                         <p>Crossfit Class</p>
                     </div>
                 </div>
-                <VideoComponentAd />
+                <VideoComponentAd/>
                 <FormContainer/>
                 <div className="form-empty-container" id="footerAnchor"/>
                 <FooterComponent/>

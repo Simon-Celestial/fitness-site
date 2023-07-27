@@ -46,8 +46,11 @@ const NavigationMenu = () => {
     }, [burgerOpen]);
     const handleClick = () => {
         if (ref?.current) {
-            navigate('/');
-            ref?.current?.click();
+            // Закрываем бургер меню, устанавливая состояние burgerOpen в false
+            setBurgerOpen(false);
+
+            // Выполняем переход по ссылке
+            navigate('/#formAnchor');
         }
     }
     const rotateMenu = () => {
@@ -76,22 +79,22 @@ const NavigationMenu = () => {
                 </div>
                 <div className="nav-container">
                     <Link to="/services#servicesAnchor">
-                        <p style={{fontWeight: location.pathname.startsWith('/services') ? 'bold' : 'normal',}}>Services</p>
+                        <p style={{color: location.pathname.startsWith('/services') ? 'orange' : 'black',}}>Services</p>
                     </Link>
                     <Link to="/challenges">
-                        <p style={{fontWeight: location.pathname.startsWith('/challenges') ? 'bold' : 'normal',}}>Challenges</p>
+                        <p style={{color: location.pathname.startsWith('/challenges') ? 'orange' : 'black',}}>Challenges</p>
                     </Link>
                     <Link to="/plans">
-                        <p style={{fontWeight: location.pathname.startsWith('/plans') ? 'bold' : 'normal',}}>Plans</p>
+                        <p style={{color: location.pathname.startsWith('/plans') ? 'orange' : 'black',}}>Plans</p>
                     </Link>
                     <Link to="/trainers">
-                        <p style={{fontWeight: location.pathname.startsWith('/trainers') ? 'bold' : 'normal',}}>Trainers</p>
+                        <p style={{color: location.pathname.startsWith('/trainers') ? 'orange' : 'black',}}>Trainers</p>
                     </Link>
                     <Link to="/groups">
-                        <p style={{fontWeight: location.pathname.startsWith('/groups') ? 'bold' : 'normal',}}>Groups</p>
+                        <p style={{color: location.pathname.startsWith('/groups') ? 'orange' : 'black',}}>Groups</p>
                     </Link>
                     <div onClick={handleClick}>
-                        <a ref={ref} href="#formAnchor">
+                        <a ref={ref} href="/#formAnchor">
                             <p>Contact</p>
                         </a>
                     </div>
@@ -134,12 +137,11 @@ const NavigationMenu = () => {
                     <p>Groups</p>
                 </Link>
                 <div onClick={handleClick}>
-                    <a ref={ref} href="#formAnchor">
+                    <a ref={ref} href="/#formAnchor">
                         <p>Contact</p>
                     </a>
                 </div>
             </div>
-
         </>
     )
 }

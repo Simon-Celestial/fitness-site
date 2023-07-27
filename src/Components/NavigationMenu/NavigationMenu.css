@@ -148,7 +148,7 @@
 
 .nav-container a>p:hover {
     cursor: pointer;
-    color: var(--orange-color);
+    color: var(--orange-color)!important;
     scale: 1.1;
 }
 .nav-container-mobile {

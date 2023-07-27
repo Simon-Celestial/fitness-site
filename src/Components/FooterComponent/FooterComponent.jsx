@@ -83,7 +83,7 @@ const FooterComponent = () => {
                                 <p>Groups</p>
                                 </Link>
                                 <div onClick={handleClick}>
-                                    <a ref={ref} href="#formAnchor">
+                                    <a ref={ref} href="/#formAnchor">
                                         <p>Contact</p>
                                     </a>
                                 </div>
