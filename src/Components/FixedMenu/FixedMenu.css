@@ -36,14 +36,14 @@
     padding: 10px 0;
 }
 
-.vertical-fixed-block img {
+.vertical-fixed-block a>img {
     width: 25px;
     height: 25px;
     filter: invert();
     cursor: pointer;
     transition: 0.3s;
 }
-.vertical-fixed-block img:hover {
+.vertical-fixed-block a>img:hover {
     filter: unset;
 }
 
@@ -91,7 +91,7 @@
         left: 10px;
         gap: 5px;
     }
-    .vertical-fixed-block img {
+    .vertical-fixed-block a>img {
         height: 20px;
         width: 20px;
     }
@@ -116,7 +116,7 @@
         width: 30px;
         left: 5px;
     }
-    .vertical-fixed-block img {
+    .vertical-fixed-block a>img {
         width: 15px;
         height: 15px;
     }

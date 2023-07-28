@@ -32,7 +32,6 @@ const infoBlockArr = [
 
 const SiteMainPage = () => {
     const location = useLocation();
-
     useEffect(() => {
         if (location.hash === "#footerAnchor") {
             const element = document.getElementById("footerAnchor");

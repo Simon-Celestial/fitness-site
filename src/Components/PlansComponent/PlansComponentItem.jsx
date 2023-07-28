@@ -1,7 +1,15 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import React, {useState} from "react";
+import NavigationModal from "../ModalComponents/NavigationModal";
 
 const PlansItem = ({name,price,description}) => {
+    const [showModal, setShowModal] = useState(false);
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
     return (
         <div className="membership-containers">
             <p>{name}</p>
@@ -9,12 +17,11 @@ const PlansItem = ({name,price,description}) => {
             <h4>Every month</h4>
             <h4>One-time payment</h4>
             <h4>30 day free trial</h4>
-            <Link to="/#formAnchor">
-            <button>Start Free Trial</button>
-            </Link>
+            <button onClick={handleOpenModal}>Start Free Trial</button>
             <div className="membership-benefit-container">
                 <h3>{description}</h3>
             </div>
+            {showModal && <NavigationModal onClose={handleCloseModal}/>}
         </div>
     );
 };

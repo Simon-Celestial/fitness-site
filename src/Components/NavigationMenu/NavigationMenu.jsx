@@ -46,10 +46,7 @@ const NavigationMenu = () => {
     }, [burgerOpen]);
     const handleClick = () => {
         if (ref?.current) {
-            // Закрываем бургер меню, устанавливая состояние burgerOpen в false
             setBurgerOpen(false);
-
-            // Выполняем переход по ссылке
             navigate('/#formAnchor');
         }
     }

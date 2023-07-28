@@ -337,7 +337,7 @@
         .feed-sharing-panel {
             width: 100px;
         }
-        .feed-blocks-item button {
+        .feed-blocks-item>button {
             width: 100px;
         }
         .groups-feed-wrapper>b {

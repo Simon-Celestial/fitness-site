@@ -71,7 +71,7 @@
     margin: 0;
 }
 
-.membership-containers button {
+.membership-containers>button {
     width: 300px;
     height: 50px;
     font-size: 18px;
@@ -80,7 +80,7 @@
     transition: 0.3s;
 }
 
-.membership-containers button:hover {
+.membership-containers>button:hover {
     background: var(--green-color);
 }
 
